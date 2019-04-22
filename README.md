@@ -18,13 +18,15 @@ When committing your peripheral make sure to edit the README file to add the nam
 
 | Peripheral Name | Verilog File | Description |
 | -- | -- | -- |
-| Peripheral A | peripheral_a.v | If you are the first student to add a peripheral then replace this row |
+| Timer/Counter0 | timer_counter0.v | A 64-bit timer/counter peripheral with 4 operation modes and 2 PWM outputs  |
 | Another Peripheral | another_one.v | If you are the second student to add a peripheral then replace this row |
 
 # Peripheral Documentation
 
-## Peripheral A ##
-The first student to commit a peripheral should replace this with documentation for the pheripheral or a link to where documentation can be found.
+## Timer/Counter0 ##
+Written by Andrew Hollabaugh
+
+A 64-bit timer/counter peripheral with 4 operation modes and 2 PWM outputs. It is based on the Timer/Counter0 perhipheral from the ATMEGA48/88/168/328 processor. Its four modes are: normal, clear on timer compare (CTC), PWM (TOP=MAX) and PWM (TOP=compare register A). A prescaler can be selected ranging from 8 to 1024. Output compares can also be forced for fine control. For more info, read the documentation [here.](https://docs.google.com/document/d/1DbuxtQeK8CZknk03VDcP6ilvkV-3jNcxF68iJGg44-w/edit?usp=sharing)
 
 ## Another Peripheral ##
 The second student to add a peripheral should replace this with documentation for the peripheral or a link to where documentation can be found.
