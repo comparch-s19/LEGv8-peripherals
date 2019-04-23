@@ -19,7 +19,8 @@ When committing your peripheral make sure to edit the README file to add the nam
 | Peripheral Name | Verilog File | Description |
 | -- | -- | -- |
 | Timer/Counter0 | timer_counter0.v | A 64-bit timer/counter peripheral with 4 operation modes and 2 PWM outputs  |
-| Another Peripheral | another_one.v | If you are the second student to add a peripheral then replace this row |
+| 16-bit TimerA | Timer_TS.v | A 16-bit timer with period and configure registers |
+| Another Peripheral | another_one.v | If you are the third student to add a peripheral then replace this row |
 
 # Peripheral Documentation
 
@@ -28,5 +29,10 @@ Written by Andrew Hollabaugh
 
 A 64-bit timer/counter peripheral with 4 operation modes and 2 PWM outputs. It is based on the Timer/Counter0 perhipheral from the ATMEGA48/88/168/328 processor. Its four modes are: normal, clear on timer compare (CTC), PWM (TOP=MAX) and PWM (TOP=compare register A). A prescaler can be selected ranging from 8 to 1024. Output compares can also be forced for fine control. For more info, read the documentation [here.](https://docs.google.com/document/d/1DbuxtQeK8CZknk03VDcP6ilvkV-3jNcxF68iJGg44-w/edit?usp=sharing)
 
+## 16-bit TimerA ##
+Written by Thomas Schofield
+
+TimerA is a 16-bit timer peripheral with a counter, configure, and period register. When instantiating the timer, use "defparam" to define a base addresss. The counter can be accessed directly at the base address. The configure and period registers are offset by 8 and 16 respectively. Example addresses are also provided in the file's comments. For more information about the configure and period registers, please visit the [documentation](https://docs.google.com/document/d/1194CkKZIows6x4uw8eE9A71nns8_jBOXP3iYx2TQ9FE/edit?usp=sharing).
+
 ## Another Peripheral ##
-The second student to add a peripheral should replace this with documentation for the peripheral or a link to where documentation can be found.
+The third student to add a peripheral should replace this with documentation for the peripheral or a link to where documentation can be found.
