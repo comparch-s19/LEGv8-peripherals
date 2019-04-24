@@ -20,6 +20,7 @@ When committing your peripheral make sure to edit the README file to add the nam
 | -- | -- | -- |
 | Timer/Counter0 | timer_counter0.v | A 64-bit timer/counter peripheral with 4 operation modes and 2 PWM outputs  |
 | 16-bit TimerA | Timer_TS.v | A 16-bit timer with period and configure registers |
+| Matrix_Peripheral0 | matrix_peripheral.v | 16-bit registers to control what is displayed on the matrix |
 | Another Peripheral | another_one.v | If you are the third student to add a peripheral then replace this row |
 
 # Peripheral Documentation
@@ -33,6 +34,11 @@ A 64-bit timer/counter peripheral with 4 operation modes and 2 PWM outputs. It i
 Written by Thomas Schofield
 
 TimerA is a 16-bit timer peripheral with a counter, configure, and period register. When instantiating the timer, use "defparam" to define a base addresss. The counter can be accessed directly at the base address. The configure and period registers are offset by 8 and 16 respectively. Example addresses are also provided in the file's comments. For more information about the configure and period registers, please visit the [documentation](https://docs.google.com/document/d/1194CkKZIows6x4uw8eE9A71nns8_jBOXP3iYx2TQ9FE/edit?usp=sharing).
+
+## Matrix_Peripheral0 ##
+Written by Richard Dell
+
+Matrix_Peripheral0 is a collection of 8 16-bit registers that will display their values on the DE0 extension board's matrix. Each register can be given its own address and can only be written to when that specific address is called. The registers will output to the GPIO_Board module to convert the value into a signal that can be displayed on the matrix. For more information, see the [documentation](https://docs.google.com/document/d/1Q0sn7gO6WcJYBJXdXe38DZ1Wy6tpFMuzw1jIvvxrgDk/edit?usp=sharing). 
 
 ## Another Peripheral ##
 The third student to add a peripheral should replace this with documentation for the peripheral or a link to where documentation can be found.
